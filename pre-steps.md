@@ -1,7 +1,7 @@
 ## 🛠 Voraussetzungen
 
-Anlaeitung aus der Solana Doku Seite
-Installiere Sie Rust, die Solana CLI und das Anchor Framework unter Windows (WSL),
+Anleitung aus der Solana Doku Seite
+Installiere Rust, die Solana CLI und das Anchor Framework unter Windows (WSL),
 
 Für Debian oder Debian-basierte Linux-Distribution wie Ubuntu oder Mint ...
 
@@ -20,4 +20,6 @@ sudo apt-get install -y \
     libudev-dev llvm libclang-dev \
     protobuf-compiler libssl-dev
 ```
+
+3. **Installieren weiter Schritt**:
 
