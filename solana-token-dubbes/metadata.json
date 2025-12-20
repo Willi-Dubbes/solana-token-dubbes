@@ -1,0 +1,14 @@
+{
+  "name": "Dubbes",
+  "symbol": "Dubbes",
+  "description": "Meme Community Token, Gastronomy, Wine, Boulevard, Pfalz",
+  "image": "https://ipfs.io/ipfs/QmWihyWtTx8CqFgbTSwFzKhsqcc3FAnBeuWj6m4gX3Emxa",
+  "website": "https://willi-dubbes.github.io/solana-token-dubbes/",
+  "attributes": [
+    { "trait_type": "Category", "value": "Meme" }
+  ],
+  "tags": ["meme"]
+}
+
+
+
