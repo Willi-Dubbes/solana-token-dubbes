@@ -50,7 +50,7 @@ Erstellen eins Kontos, um die Token zu empfangen, und präge (minto) die gewüns
 # Token-Konto erstellen
 spl-token create-account <DEINE_MINT_ADRESSE>
 
-# 1.00.000.000 Token prägen
+# 100.000.000 Token prägen
 spl-token mint <DEINE_MINT_ADRESSE> 100000000
 ```
 ##  Sicherheit: Mint Authority widerrufen
