@@ -5,6 +5,12 @@ Solana Dubbes Token, A Meme Community Token for Gastronomy, Wine, Boulevard, Pal
 
 Diese Anleitung beschreibt die technische Erstellung des **Dubbes** Tokens auf der Solana Blockchain unter Verwendung des SPL-Token-Standards.
 
+📋 Token Details
+* Name: Dubbes
+* Symbol: Dubbes
+* Beschreibung: Meme Community Token, Gastronomy, Wine, Boulevard, Pfalz
+* Dezimalstellen: 9 (Standard)
+
 ## 🛠 Voraussetzungen
 Vorbereitung Solana CLI installieren [Pre-Steps](pre-steps.md)
 
