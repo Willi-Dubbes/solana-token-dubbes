@@ -41,8 +41,51 @@
             letter-spacing: 2px;
         }
 
-        .language-switch {
-            margin-top: 15px;
+        .header-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .github-link {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+            margin-left: 5px;
+        }
+
+        .github-link:hover {
+            transform: scale(1.1);
+        }
+
+        .github-icon {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
         }
 
         .container {
@@ -105,12 +148,22 @@
             transform: scale(1.05);
         }
 
-        .notice {
-            margin-top: 40px;
-            padding: 20px;
-            background: #fff3cd;
-            border-left: 5px solid #d39e00;
+        .disclaimer-box {
+            margin-top: 60px;
+            padding: 25px;
+            background: #fff;
+            border-left: 5px solid var(--primary-color);
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 0.85rem;
+            color: #555;
+            text-align: left;
+        }
+
+        .disclaimer-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
         }
     </style>
 
@@ -128,33 +181,32 @@
     <img src="https://ipfs.io/ipfs/QmRx2DncBoCMNTb8bEYTd7GsrMDoGCEQSx4FXPPE3aMN12" alt="Dubbes Glas Logo">
     <h1>Dubbes</h1>
 
-    <div class="language-switch">
-        <button onclick="switchLanguage('de')">Deutsch</button>
-        <button onclick="switchLanguage('en')">English</button>
+    <div class="header-controls">
+        <button class="lang-btn" onclick="switchLanguage('de')"><span>🇩🇪</span> DE</button>
+        <button class="lang-btn" onclick="switchLanguage('en')"><span>🇺🇸</span> EN</button>
+        <a href="https://github.com/Willi-Dubbes/solana-token-dubbes/" target="_blank" class="github-link" title="GitHub Project">
+            <svg class="github-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
     </div>
 </header>
 
 <div class="container">
 
-    <!-- DEUTSCH -->
     <div data-lang="de">
         <section class="hero">
             <h2>Dein Viertel. Dein Wein. Dein Token.</h2>
-            <p>
-                DUBBES ist mehr als nur eine Kryptowährung. Es ist die digitale Verbindung zwischen der pfälzer Lebensfreude,
-                traditionellen Weinstuben und der modernen Boulevard-Subkultur.
-            </p>
+            <p>DUBBES ist mehr als nur eine Kryptowährung. Es ist die digitale Verbindung zwischen der pfälzer Lebensfreude, traditionellen Weinstuben und der modernen Boulevard-Subkultur.</p>
             <a href="#" class="btn">Token sichern</a>
         </section>
 
         <div class="grid">
             <div class="card">
                 <h3>🍷 Gastronomie & Wein</h3>
-                <p>Unterstütze lokale Winzer und Lieblings-Schorle-Spots. Zahle mit DUBBES und erhalte Zugang zu limitierten Jahrgängen oder reservierten Tischen.</p>
+                <p>Unterstütze lokale Winzer und Lieblings-Schorle-Spots. Zahle mit DUBBES und erhalte Zugang zu limitierten Jahrgängen.</p>
             </div>
             <div class="card">
                 <h3>✨ Boulevard & Lifestyle</h3>
-                <p>Vom Jungbusch bis zur Maximilianstraße: DUBBES ist die Währung derer, die das Leben genießen. Erlebe Events, Vernissagen und Pop-up-Stores exklusiv für die Community.</p>
+                <p>Vom Jungbusch bis zur Maximilianstraße: DUBBES ist die Währung derer, die das Leben genießen.</p>
             </div>
             <div class="card"> 
                 <h3>🤝 Community Power</h3>
@@ -164,47 +216,44 @@
 
         <section style="margin-top: 60px; text-align: center;">
             <h2>Warum das Dubbe-Glas?</h2>
-            <p>Es liegt sicher in der Hand – genau wie unser Token. Es symbolisiert Standfestigkeit, Gemeinschaft und Leidenschaft.</p>
+            <p>Dubbes liegt fest in der Hand – genau wie unser Token. Es symbolisiert Standfestigkeit, Gemeinschaft und Leidenschaft.</p>
         </section>
-
-        <div class="notice">
-            <strong>Hinweis:</strong> Kryptowährungen und Token sind mit finanziellen Risiken verbunden. Der Wert kann stark schwanken.
+		
+        <div class="disclaimer-box">
+            <h4>⚖️ Rechtlicher Risikoausschluss</h4>
+            <p><strong>Keine Anlageberatung:</strong> DUBBES ist ein Meme-Token zu Unterhaltungszwecken ohne inneren Wert oder Gewinnversprechen.</p>
+            <p><strong>Hochrisiko:</strong> Kryptowährungen sind extrem volatil. Ein Totalverlust ist jederzeit möglich. Der Token stellt keine Beteiligung an einem Unternehmen dar.</p>
+            <p><strong>Haftung:</strong> Mit dem Erwerb stellst du die Ersteller von jeglicher Haftung für finanzielle Verluste frei. Investiere nur, was du bereit bist zu verlieren.</p>
         </div>
     </div>
 
-    <!-- ENGLISH -->
     <div data-lang="en">
         <section class="hero">
             <h2>Your Neighborhood. Your Wine. Your Token.</h2>
-            <p>
-                DUBBES is more than just a cryptocurrency. It is the digital bridge between Palatinate joy of life,
-                traditional wine taverns, and modern boulevard subculture.
-            </p>
+            <p>DUBBES is more than just a cryptocurrency. It is the digital bridge between Palatinate joy of life, traditional wine taverns, and modern boulevard subculture.</p>
             <a href="#" class="btn">Get Token</a>
         </section>
 
         <div class="grid">
             <div class="card">
                 <h3>🍷 Gastronomy & Wine</h3>
-                <p>Support local winemakers and your favorite wine spots. Pay with DUBBES and gain access to limited vintages or reserved tables.</p>
+                <p>Support local winemakers and your favorite wine spots. Pay with DUBBES and gain access to limited vintages.</p>
             </div>
             <div class="card">
                 <h3>✨ Boulevard & Lifestyle</h3>
-                <p>DUBBES is the currency for those who enjoy life. Experience events, exhibitions, and pop-up stores exclusive to the community.</p>
+                <p>DUBBES is the currency for those who enjoy life. Experience events and pop-up stores exclusive to the community.</p>
             </div>
             <div class="card">
                 <h3>🤝 Community Power</h3>
                 <p>A portion of the fees supports cultural preservation and social projects in the region.</p>
             </div>
         </div>
-
-        <section style="margin-top: 60px; text-align: center;">
-            <h2>Why the Dubbe Glass?</h2>
-            <p>It fits securely in your hand – just like our token. It symbolizes stability, community, and passion.</p>
-        </section>
-
-        <div class="notice">
-            <strong>Note:</strong> Cryptocurrencies and tokens involve financial risks. Values may fluctuate significantly.
+		
+        <div class="disclaimer-box">
+            <h4>⚖️ Legal Disclaimer</h4>
+            <p><strong>No Investment Advice:</strong> DUBBES is a meme token created for entertainment purposes only, with no intrinsic value or expectation of financial return.</p>
+            <p><strong>High Risk:</strong> Cryptocurrencies are highly volatile. Total loss of capital is possible. This token does not represent shares in any company.</p>
+            <p><strong>Liability:</strong> By purchasing, you agree that the creators are not liable for any financial losses. Only invest money you can afford to lose.</p>
         </div>
     </div>
 
@@ -214,13 +263,12 @@
     <p>&copy; 2025 DUBBES – In de Palz geht nix verlore. | <a href="#impressum" style="color: white;">Impressum</a></p>
 </footer>
 
-<!-- IMPRESSUM -->
 <div id="impressum" class="container" style="margin-bottom: 80px;">
     <h2>Impressum</h2>
     Diese Webseite ist dem Werk von Willi Dubbes gewidmet
     <p>
         Verantwortlich gemäß § 5 TMG:<br>
-        Willi Dubbes  <br>
+        Willi Dubbes<br>
         Deutschland<br><br>
         E-Mail: dubbes@protonmail.com
     </p>
