@@ -1,14 +1,27 @@
 {
   "name": "Dubbes",
-  "symbol": "Dubbes",
-  "description": "Meme Community Token, Gastronomy, Wine, Boulevard, Pfalz",
+  "symbol": "DUBBES",
+  "description": "Der ultimative Meme Community Token für die Pfalz! Von Wandertouren, Gastronomy, Boulevard bis hin zu Geselligkeit und Wein-Genuß. Dubbes verbindet die Pfälzer Lebensfreude.",
+  "external_url": "https://github.com/Willi-Dubbes/solana-token-dubbes/",
   "image": "https://ipfs.io/ipfs/QmWihyWtTx8CqFgbTSwFzKhsqcc3FAnBeuWj6m4gX3Emxa",
-  "website": "https://willi-dubbes.github.io/solana-token-dubbes/",
   "attributes": [
-    { "trait_type": "Category", "value": "Meme" }
+    {
+      "trait_type": "Region",
+      "value": "Pfalz"
+    },
+    {
+      "trait_type": "Category",
+      "value": "Meme Token"
+    }
   ],
-  "tags": ["meme"]
+  "properties": {
+    "files": [
+      {
+        "uri": "https://ipfs.io/ipfs/QmWihyWtTx8CqFgbTSwFzKhsqcc3FAnBeuWj6m4gX3Emxa",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
 }
-
-
 
