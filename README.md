@@ -61,7 +61,6 @@ Um das Vertrauen der Community zu gewinnen, wird die Erlaubnis, weitere Token zu
 spl-token authorize <DEINE_MINT_ADRESSE> mint --disable
 ```
 
-
 ⚠️ Rechtlicher Hinweis: DUBBES ist ein Meme-Token zu Unterhaltungszwecken ohne inneren Wert oder Gewinnversprechen. Kryptotoken sind hochspekulativ. Diese Anleitung dient rein technischen Zwecken und stellt keine Anlageberatung dar. Investiere nur, was du bereit bist zu verlieren.
 
 
