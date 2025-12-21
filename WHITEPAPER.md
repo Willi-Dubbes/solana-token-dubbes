@@ -49,9 +49,12 @@ Die wirtschaftliche Struktur von DUBBES ist auf maximale Transparenz und Sicherh
 * Name:			  Dubbes
 * Symbol:			DUBBES
 * Blockchain:		Solana
-* Gesamtmenge:	100.000.000 $DUBBES
 * Kategorie:		Meme Token
-* Handelsgebühren:0% Kauf-/0% Verkaufssteuer
+* Gesamtmenge:	100.000.000 $DUBBES
+* Transfer Fee: 0% (Protokollseitig auf 0 gesetzt)
+
+> [!NOTE]
+> Hinweis zu Gebühren: Die Transfer Fee wurde im Protokoll permanent auf 0 gesetzt, sodass keine Gebühren zugunsten der Ersteller anfallen. Unabhängig davon fallen beim Handel die üblichen Solana-Netzwerkgebühren (Gas) sowie die Standard-Gebühren der jeweiligen dezentralen Handelsplattform (DEX, z. B. Raydium oder Jupiter) an.
 
 #### 5.2 Token-Verteilung (Allocation)
 geplant:
@@ -91,4 +94,5 @@ Technische Risiken: Trotz Sorgfalt können Fehler im Smart Contract oder Angriff
 ### 7.5 Steuerliche & Lokale Pflichten
 
 Der Nutzer ist allein dafür verantwortlich, die steuerlichen Auswirkungen seiner Transaktionen gemäß den Gesetzen seines Wohnsitzlandes zu prüfen und zu erfüllen. Der Zugriff auf dieses Projekt kann in bestimmten Jurisdiktionen eingeschränkt oder untersagt sein. Nutzer sind verpflichtet, sich über lokale Gesetze zu informieren und diese einzuhalten.
+
 
