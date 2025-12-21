@@ -8,7 +8,7 @@ Diese Anleitung beschreibt die technische Erstellung des **Dubbes** Tokens auf d
 📋 Token Details
 * Name: Dubbes
 * Symbol: Dubbes
-* Beschreibung: Meme Community Token, Gastronomy, Wine, Boulevard, Pfalz
+* Beschreibung: Meme Community Token, Pfalz, Wine, Boulevard, Hike, Gastronomy
 * Dezimalstellen: 9 (Standard)
 
 ## 🛠 Voraussetzungen
