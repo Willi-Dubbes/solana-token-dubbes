@@ -8,8 +8,9 @@ Diese Anleitung beschreibt die technische Erstellung des **Dubbes** Tokens auf d
 📋 Token Details
 * Name: Dubbes
 * Symbol: Dubbes
-* Beschreibung: Meme Community Token, Pfalz, Wine, Boulevard, Hike, Gastronomy
+* Beschreibung: Der ultimative Meme Community Token für die Pfalz! Von Wandertouren, Gastronomy, Boulevard bis hin zu Geselligkeit und Wein-Genuß. Dubbes verbindet die Pfälzer Lebensfreude.
 * Dezimalstellen: 9 (Standard)
+* Umlaufmenge 100.000.000 Token
 
 ## 🛠 Voraussetzungen
 Vorbereitung Solana CLI installieren [Pre-Steps](pre-steps.md)
