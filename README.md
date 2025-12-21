@@ -15,10 +15,10 @@ Diese Anleitung beschreibt die technische Erstellung des **Dubbes** Tokens auf d
 Vorbereitung Solana CLI installieren [Pre-Steps](pre-steps.md)
 
 ## Wallet & Netzwerk konfigurieren
-Zuerst erstellen wir eine lokale Wallet und setzen das Netzwerk auf das Mainnet (Produktion), da der Token zuvor auf Devnet bereits getestet wurde
-
+Zuerst erstellen wir eine lokale Wallet und setzen das Netzwerk auf das Mainnet (Produktion), da der Token zuvor auf Devnet bereits getestet wurde.
+Hinweis: Falls ihr eueren eigenen Token ersten möchtet empfehle ich euch zuerst auf dem Devnet alles zu verbroben.
 ```bash
-# Neue Wallet generieren
+# Neues Wallet generieren
 solana-keygen new --outfile ~/dubbes-wallet.json
 
 # Wallet als Standard-Keypair setzen
@@ -27,8 +27,10 @@ solana config set --keypair ~/dubbes-wallet.json
 # Netzwerk auf Mainnet setzen (für echte Token)
 solana config set --url [https://api.mainnet-beta.solana.com](https://api.mainnet-beta.solana.com)
 ```
+> [!NOTE]
+> Wichtig, den Wallet Schlüssel sicher und geschützt vor fremden Augen aufbewahren. Wer den Schlüssel besitzt hat die Kontrolle über das Wallet und die enthaltenen Token.
 
-Hinweis: Im nächsten Schritte ca. 0.1 SOL an die Adresse in [...-wallet].json senden, um die Gebühren zu decken.
+Hinweis: Im nächsten Schritte ca. 0.1 SOL an die Adresse in [...-wallet].json senden, um die Solana Netz Gebühren für die Token Erstellung zu decken.
 
 ## Token-Metadaten vorbereiten
 Erstelle eine Datei namens metadata.json. Diese enthält die Beschreibung deines Tokens. Lade das Bild vorab bei einem IPFS-Anbieter hoch.
