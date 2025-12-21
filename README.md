@@ -16,7 +16,7 @@ Vorbereitung Solana CLI installieren [Pre-Steps](pre-steps.md)
 
 ## Wallet & Netzwerk konfigurieren
 Zuerst erstellen wir eine lokale Wallet und setzen das Netzwerk auf das Mainnet (Produktion), da der Token zuvor auf Devnet bereits getestet wurde.
-Hinweis: Falls ihr eueren eigenen Token ersten möchtet empfehle ich euch zuerst auf dem Devnet alles zu verbroben.
+Falls ihr eueren eigenen Token erstellen möchtet empfehle ich euch diesen zuerst auf dem Devnet zu verbroben.
 ```bash
 # Neues Wallet generieren
 solana-keygen new --outfile ~/dubbes-wallet.json
