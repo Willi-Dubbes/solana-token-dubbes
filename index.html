@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubbes - Der Pfalz Community Token</title>
+    <title>Dubbes ($DUBBES) - Der Pfalz Community Token auf Solana</title>
     <style>
         :root {
-            --primary-color: #720e32;
-            --secondary-color: #f4f1ea;
-            --accent-color: #00a8e8;
+            --primary-color: #720e32; /* Pfälzer Weinrot */
+            --secondary-color: #f4f1ea; /* Helles Beige */
+            --accent-color: #00a8e8; /* Akzentblau, falls benötigt */
             --text-dark: #2d2d2d;
         }
 
@@ -99,30 +99,50 @@
             margin-bottom: 50px;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 20px auto;
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: #555;
+        }
+
+        /* Grid für die Säulen */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
             margin-top: 40px;
         }
 
         .card {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-bottom: 5px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+             transform: translateY(-5px);
         }
 
         .card h3 {
             color: var(--primary-color);
             margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .symbolik-section {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px 20px;
         }
 
         footer {
@@ -130,32 +150,36 @@
             padding: 40px;
             background: var(--primary-color);
             color: white;
-            margin-top: 50px;
+            margin-top: 80px;
         }
 
         .btn {
             display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: bold;
-            transition: transform 0.2s;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(114, 14, 50, 0.3);
         }
 
         .btn:hover {
             transform: scale(1.05);
+            background-color: #5a0b28;
+            box-shadow: 0 6px 15px rgba(114, 14, 50, 0.4);
         }
 
         .disclaimer-box {
-            margin-top: 60px;
-            padding: 25px;
+            margin-top: 80px;
+            padding: 30px;
             background: #fff;
-            border-left: 5px solid var(--primary-color);
+            border-left: 6px solid var(--primary-color);
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-size: 0.85rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            font-size: 0.9rem;
             color: #555;
             text-align: left;
         }
@@ -164,13 +188,21 @@
             margin-top: 0;
             color: var(--primary-color);
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     </style>
 
     <script>
         function switchLanguage(lang) {
+            // Verstecke alle Elemente mit data-lang Attribut
             document.querySelectorAll("[data-lang]").forEach(el => {
-                el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+                el.style.display = "none";
+            });
+            // Zeige nur die Elemente der gewählten Sprache
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.style.display = "block";
             });
         }
     </script>
@@ -178,12 +210,15 @@
 <body onload="switchLanguage('de')">
 
 <header>
-    <img src="https://ipfs.io/ipfs/QmRx2DncBoCMNTb8bEYTd7GsrMDoGCEQSx4FXPPE3aMN12" alt="Dubbes Glas Logo">
-    <h1>Dubbes</h1>
+    <!-- Platzhalter-Logo verwenden, da IPFS Link oft langsam ist -->
+    <img src="https://ipfs.io/ipfs/QmRx2DncBoCMNTb8bEYTd7GsrMDoGCEQSx4FXPPE3aMN12" alt="Dubbes Glas Logo" style="border-radius: 50%;">
+    <!-- Original Bild Link (falls er wieder funktioniert): <img src="https://ipfs.io/ipfs/QmRx2DncBoCMNTb8bEYTd7GsrMDoGCEQSx4FXPPE3aMN12" alt="Dubbes Glas Logo"> -->
+    <h1>Dubbes ($DUBBES)</h1>
 
     <div class="header-controls">
         <button class="lang-btn" onclick="switchLanguage('de')"><span>🇩🇪</span> DE</button>
         <button class="lang-btn" onclick="switchLanguage('en')"><span>🇺🇸</span> EN</button>
+        <!-- GitHub Link -->
         <a href="https://github.com/Willi-Dubbes/solana-token-dubbes/" target="_blank" class="github-link" title="GitHub Project">
             <svg class="github-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         </a>
@@ -192,68 +227,90 @@
 
 <div class="container">
 
+    <!-- ================= DEUTSCHE VERSION ================= -->
     <div data-lang="de">
         <section class="hero">
             <h2>Dein Viertel. Dein Wein. Dein Token.</h2>
-            <p>DUBBES ist mehr als nur eine Token. Es ist die digitale Verbindung zwischen der pfälzer Lebensfreude, traditionellen Weinstuben und der modernen Boulevard-Subkultur.</p>
-            <a href="#" class="btn">Token sichern</a>
+            <p>DUBBES ist der erste Meme-Community-Token, der die traditionelle pfälzer Lebensfreude mit der modernen Blockchain-Technologie von Solana verbindet. Die digitale Brücke zwischen Weinstube, Wanderweg und urbanem Lifestyle.</p>
+            <!-- Hier später den Link zum DEX (z.B. Raydium) einfügen -->
+            <a href="#" class="btn">Token kaufen (Bald verfügbar)</a>
         </section>
 
+        <!-- Die Säulen des Ökosystems (aus Whitepaper Kap. 3) -->
         <div class="grid">
             <div class="card">
                 <h3>🍷 Gastronomie & Wein</h3>
-                <p>Unterstütze lokale Winzer und deine Lieblings-Schorle-Spots. Als Teil der DUBBES-Community erhältst du besonderen Zugang zu limitierten Jahrgängen.</p>
+                <p>Im Fokus steht das gemeinsame Genießen Pfälzer Spezialitäten und die Wertschätzung der regionalen Genusskultur. Wir fördern lokale Schorle-Spots und Winzer.</p>
             </div>
             <div class="card">
                 <h3>✨ Boulevard & Lifestyle</h3>
-                <p>Vom Jungbusch bis zur Maximilianstraße: DUBBES ist die Community derer, die das Leben genießen.</p>
+                <p>Urbane Vernetzung für Genießer, vom Jungbusch bis zur Maximilianstraße. Wir schaffen einzigartige Community-Momente und Pop-up-Begegnungen im urbanen Raum.</p>
             </div>
             <div class="card"> 
-                <h3>🤝 Community Power</h3>
-                <p>Gemeinsam für die Pfalz: Wir setzen uns aktiv für den Erhalt unserer einzigartigen Kulturlandschaft und die Unterstützung lokaler sozialer Projekte ein. Werde Teil einer Bewegung, die Tradition und Moderne verbindet.</p>
+                <h3>🤝 Community & Natur</h3>
+                <p>Tradition trifft Moderne. Wir fördern das Erleben der Natur durch Wandertouren im Pfälzerwald und setzen uns aktiv für den Erhalt unserer Kulturlandschaft ein.</p>
             </div>
         </div>
 
-        <section style="margin-top: 60px; text-align: center;">
+        <!-- Symbolik Sektion (aus Whitepaper Kap. 4) -->
+        <section class="symbolik-section">
             <h2>Warum das Dubbe-Glas?</h2>
-            <p>Dubbes liegt fest in der Hand – genau wie unser Token. Es symbolisiert Standfestigkeit, Gemeinschaft und Leidenschaft.</p>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Das Dubbe-Glas ist mehr als nur ein Trinkgefäß. Es ist das Herzstück unseres Brandings und ein Symbol für:</p>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap;">
+                <div><span style="font-size: 2.5rem;">✊</span><br><strong>Standfestigkeit</strong><br>Ein fester Griff in jeder Lage.</div>
+                <div><span style="font-size: 2.5rem;">🍻</span><br><strong>Gemeinschaft</strong><br>Geselligkeit und Zusammenhalt.</div>
+                <div><span style="font-size: 2.5rem;">❤️</span><br><strong>Leidenschaft</strong><br>Ausdruck der Pfälzer Lebensart.</div>
+            </div>
         </section>
 		
+        <!-- Rechtlicher Disclaimer (Aktualisiert aus Whitepaper Kap. 7) -->
         <div class="disclaimer-box">
-            <h4>⚖️ Rechtlicher Risikoausschluss</h4>
-            <p><strong>Keine Anlageberatung:</strong> DUBBES ist ein Meme-Token zu Unterhaltungszwecken ohne inneren Wert oder Gewinnversprechen.</p>
-            <p><strong>Hochrisiko:</strong> Kryptotoken sind extrem volatil. Ein Totalverlust ist jederzeit möglich. Der Token stellt keine Beteiligung an einem Unternehmen dar.</p>
-            <p><strong>Haftung:</strong> Mit dem Erwerb stellst du die Ersteller von jeglicher Haftung für finanzielle Verluste frei. Investiere nur, was du bereit bist zu verlieren.</p>
+            <h4>⚖️ Rechtlicher Risikoausschluss (Wichtig)</h4>
+            <p><strong>Meme Token Natur:</strong> DUBBES ist ein Utility- und Meme-Token, der primär zu Unterhaltungszwecken dient. Er besitzt <strong>keinen inneren Wert</strong> und gewährt keine Rechte auf Gewinnausschüttungen oder Unternehmensanteile. Er ist kein Finanzinstrument.</p>
+            <p><strong>Totalverlustrisiko:</strong> Der Wert von Kryptotoken kann extrem schwanken und bis auf Null fallen. Investieren Sie nur Kapital, dessen Verlust Sie sich leisten können.</p>
+            <p><strong>Keine Anlageberatung:</strong> Die Informationen auf dieser Seite dienen ausschließlich Informationszwecken und stellen keine Finanz- oder Anlageberatung dar.</p>
         </div>
     </div>
 
+    <!-- ================= ENGLISCHE VERSION ================= -->
     <div data-lang="en">
         <section class="hero">
             <h2>Your Neighborhood. Your Wine. Your Token.</h2>
-            <p>DUBBES is more than just a token. It is the digital bridge between Palatinate joy of life, traditional wine taverns, and modern boulevard subculture.</p>
-            <a href="#" class="btn">Get Token</a>
+            <p>DUBBES is the first meme community token connecting traditional Palatinate joy of life with modern Solana blockchain technology. The digital bridge between wine taverns, hiking trails, and urban lifestyle.</p>
+            <a href="#" class="btn">Buy Token (Coming Soon)</a>
         </section>
 
         <div class="grid">
             <div class="card">
                 <h3>🍷 Gastronomy & Wine</h3>
-                <p>Support local winemakers and your favorite wine spots. As part of the DUBBES community, you will gain special access to limited vintages.</p>
+                <p>The focus is on enjoying Palatinate specialties together and appreciating regional culture. We support local "Schorle-Spots" and winemakers.</p>
             </div>
             <div class="card">
                 <h3>✨ Boulevard & Lifestyle</h3>
-                <p>DUBBES is the community for those who enjoy life. Experience events and pop-up stores exclusive to the community.</p>
+                <p>Urban networking for connoisseurs, from Jungbusch to Maximilianstraße. We create unique community moments and pop-up encounters in urban spaces.</p>
             </div>
             <div class="card">
-                <h3>🤝 Community Power</h3>
-                <p>Together for the Palatinate: We are actively committed to preserving our unique cultural landscape and supporting local social projects. Become part of a movement that connects tradition and modernity.</p>
+                <h3>🤝 Community & Nature</h3>
+                <p>Tradition meets modernity. We promote experiencing nature through hiking tours in the Palatinate Forest and actively support the preservation of our cultural landscape.</p>
             </div>
         </div>
+
+        <section class="symbolik-section">
+            <h2>Why the Dubbe-Glas?</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">The Dubbe-Glas (dimpled glass) is more than just a drinking vessel. It is the heart of our branding and symbolizes:</p>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap;">
+                <div><span style="font-size: 2.5rem;">✊</span><br><strong>Stability</strong><br>A firm grip in every situation.</div>
+                <div><span style="font-size: 2.5rem;">🍻</span><br><strong>Community</strong><br>Conviviality and cohesion.</div>
+                <div><span style="font-size: 2.5rem;">❤️</span><br><strong>Passion</strong><br>An expression of the Palatinate way of life.</div>
+            </div>
+        </section>
 		
+        <!-- Legal Disclaimer (English) -->
         <div class="disclaimer-box">
-            <h4>⚖️ Legal Disclaimer</h4>
-            <p><strong>No Investment Advice:</strong> DUBBES is a meme token created for entertainment purposes only, with no intrinsic value or expectation of financial return.</p>
-            <p><strong>High Risk:</strong> Cryptotoken are highly volatile. Total loss of capital is possible. This token does not represent shares in any company.</p>
-            <p><strong>Liability:</strong> By purchasing, you agree that the creators are not liable for any financial losses. Only invest money you can afford to lose.</p>
+            <h4>⚖️ Legal Disclaimer (Important)</h4>
+            <p><strong>Meme Token Nature:</strong> DUBBES is a utility and meme token intended primarily for entertainment purposes. It has <strong>no intrinsic value</strong> and grants no rights to dividends or company shares. It is not a financial instrument.</p>
+            <p><strong>Risk of Total Loss:</strong> The value of crypto tokens can fluctuate extremely and drop to zero. Only invest capital that you can afford to lose.</p>
+            <p><strong>No Investment Advice:</strong> The information on this page is for informational purposes only and does not constitute financial or investment advice.</p>
         </div>
     </div>
 
@@ -261,16 +318,19 @@
 
 <footer>
     <p>&copy; 2025 DUBBES – In de Palz geht nix verlore. | <a href="#impressum" style="color: white;">Impressum</a></p>
+    <!-- Hinweis: Link zum Whitepaper könnte hier auch noch rein -->
 </footer>
 
 <div id="impressum" class="container" style="margin-bottom: 80px;">
     <h2>Impressum</h2>
-    Diese Webseite ist dem Werk von Willi Dubbes gewidmet
     <p>
+        Willi Dubbes (DeHecht) Lead Developer & Meme-Stratege<br>
+        E-Mail: dubbes@protonmail.com
+    </p>
+    <p style="font-size: 0.9rem; color: #666;">
         Verantwortlich gemäß § 5 TMG:<br>
         [Trage deinen Namen für deine Projektseite hier ein]<br>
-        [ergänze dein die Adresse für dein Projekt]<br><br>
-        E-Mail: dubbes@protonmail.com
+        [ergänze dein die Adresse für dein Projekt]<br>
     </p>
 </div>
 
