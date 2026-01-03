@@ -21,6 +21,27 @@
             line-height: 1.6;
         }
 
+        /* ----- NEU: Angepasster Stil für die Leisten oben und unten ----- */
+        .notice-bar {
+            background-color: #e0e0e0;
+            color: #555;
+            text-align: center;
+            padding: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        /* Spezifische Rahmen für oben und unten */
+        .notice-top {
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .notice-bottom {
+            border-top: 1px solid #ccc;
+            margin-top: 20px; /* Kleiner Abstand zum vorherigen Element */
+        }
+        /* --------------------------------------------------------------- */
+
         header {
             background-color: white;
             padding: 2rem;
@@ -70,7 +91,6 @@
             color: white;
         }
 
-        /* ----- NEU: Generische Klasse für Social Links ----- */
         .social-link {
             display: flex;
             align-items: center;
@@ -81,7 +101,7 @@
 
         .social-link:hover {
             transform: scale(1.1);
-            color: #5a0b28; /* Dunklerer Hover-Effekt */
+            color: #5a0b28; 
         }
 
         .social-icon {
@@ -89,7 +109,6 @@
             height: 28px;
             fill: currentColor;
         }
-        /* -------------------------------------------------- */
 
         .container {
             max-width: 1000px;
@@ -115,7 +134,6 @@
             color: #555;
         }
 
-        /* Grid für die Säulen */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,11 +217,9 @@
 
     <script>
         function switchLanguage(lang) {
-            // Verstecke alle Elemente mit data-lang Attribut
             document.querySelectorAll("[data-lang]").forEach(el => {
                 el.style.display = "none";
             });
-            // Zeige nur die Elemente der gewählten Sprache
             document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
                 el.style.display = "block";
             });
@@ -211,6 +227,10 @@
     </script>
 </head>
 <body onload="switchLanguage('de')">
+
+<div class="notice-bar notice-top">
+    [Open Source Projekt - Feel free to use it]
+</div>
 
 <header>
     <img src="https://ipfs.io/ipfs/QmRx2DncBoCMNTb8bEYTd7GsrMDoGCEQSx4FXPPE3aMN12" alt="Dubbes Glas Logo" style="border-radius: 50%;">
@@ -237,7 +257,7 @@
         <section class="hero">
             <h2>Dein Viertel. Dein Wein. Dein Token.</h2>
             <p>DUBBES ist der erste Meme-Community-Token, der die traditionelle pfälzer Lebensfreude mit der modernen Blockchain-Technologie von Solana verbindet. Die digitale Brücke zwischen Weinstube, Wanderweg und urbanem Lifestyle.</p>
-            <a href="#" class="btn">Token kaufen (Bald verfügbar)</a>
+            <a href="https://jup.ag/tokens/dubu6QUvWrhhQR3jqUdyKYkr4DpUj7AS5jLtbEL15D6" class="btn">Token kaufen (Bald verfügbar)</a>
         </section>
 
         <div class="grid">
@@ -330,6 +350,10 @@
         [Trage deinen Namen für deine Projektseite hier ein]<br>
         [ergänze dein die Adresse für dein Projekt]<br>
     </p>
+</div>
+
+<div class="notice-bar notice-bottom">
+    [Open Source Projekt - Feel free to use it]
 </div>
 
 </body>
